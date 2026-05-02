@@ -1,42 +1,34 @@
 import { Link } from "react-router";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Linkedin, Mail, ArrowRight } from "lucide-react";
-
-const projects = [
-  {
-    id: "ai-assistant",
-    title: "AI Assistant for Enterprise Teams",
-    tag: "AI Product · Data Intelligence",
-    description: "Building AI-powered tools that help teams make better decisions faster.",
-    image: "https://images.unsplash.com/photo-1668714341253-81139e265a19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHdvcmtzcGFjZSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc2NTcxNDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    id: "ml-platform",
-    title: "ML Model Management Platform",
-    tag: "Platform · Infrastructure",
-    description: "Designing systems that make machine learning accessible to product teams.",
-    image: "https://images.unsplash.com/photo-1668713239048-0746aac1fec1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHdvcmtzcGFjZSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc2NTcxNDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    id: "recommendation-engine",
-    title: "Personalized Recommendation Engine",
-    tag: "User Experience · ML",
-    description: "Creating intelligent systems that learn and adapt to individual user needs.",
-    image: "https://images.unsplash.com/photo-1730036900477-09391e7a5414?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHdvcmtzcGFjZSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc2NTcxNDUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-];
+import { projects } from "../data/portfolioData";
 
 export function Home() {
   return (
     <div className="max-w-[800px] mx-auto px-6 py-20">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between mb-16 text-sm">
+        <div className="flex items-center gap-6">
+          <Link to="/" className="text-[#1C1C1C] font-medium border-b border-[#1C1C1C] pb-0.5">Work</Link>
+          <Link to="/resources" className="text-[#6B6B6B] hover:text-[#1C1C1C] transition-colors pb-0.5">Resources</Link>
+          <a href="#about" className="text-[#6B6B6B] hover:text-[#1C1C1C] transition-colors pb-0.5">About</a>
+        </div>
+        <div className="flex items-center gap-6">
+          <a href="https://www.linkedin.com/in/ashley-z/" target="_blank" rel="noopener noreferrer" className="text-[#6B6B6B] hover:text-[#1C1C1C] transition-colors pb-0.5">LinkedIn</a>
+          <a href="mailto:ashleyzhang@outlook.com" className="text-[#6B6B6B] hover:text-[#1C1C1C] transition-colors pb-0.5">Email</a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <div className="pt-16 pb-24">
+        <p className="text-sm uppercase text-[#6B6B6B] mb-4"></p>
         <h1 className="text-[3.5rem] leading-[1.1] tracking-tight text-[#1C1C1C] mb-6" style={{ fontFamily: "'Lora', serif" }}>
-          Building AI products that <em className="not-italic text-[#D4845A]">feel human</em>
+          Ashley is a product manager with a math & stats background and love for live music. She is a fan of <em className="not-italic text-[#D4845A]">messy data</em>, learns by building, and notices everything twice.
         </h1>
-        <p className="text-lg text-[#6B6B6B]">
-          Product Manager · AI & Machine Learning
-        </p>
+        <p className="text-lg text-[#6B6B6B] mb-8"></p>
+        <a href="#about" className="inline-flex items-center gap-2 text-[#1C1C1C] hover:text-[#D4845A] transition-colors group">
+          <span className="text-sm border-b border-[#1C1C1C] group-hover:border-[#D4845A] pb-0.5">About me →</span>
+        </a>
       </div>
 
       {/* Projects Section */}
@@ -77,49 +69,55 @@ export function Home() {
         </div>
       </div>
 
-      {/* Product Principles Section */}
       <div className="mb-32">
-        <h2 className="text-xs uppercase tracking-wider text-[#6B6B6B] mb-12">Product Principles</h2>
+        <h2 className="text-xs uppercase tracking-wider text-[#6B6B6B] mb-8">Principles</h2>
+        <p className="text-xl text-[#1C1C1C] leading-relaxed mb-12 max-w-[750px]">
+          Curious and always building — I bring together rigorous data analysis, hands-on prototyping, and domain learning to close the gap between what a system does and what users actually need it to do.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white border border-[rgba(28,28,28,0.08)] rounded-xl p-8">
             <h3 className="text-xl text-[#1C1C1C] mb-3">Signal over noise</h3>
-            <p className="text-[#6B6B6B] leading-relaxed">Data quality is a product input, not a given.</p>
+            <p className="text-[#6B6B6B] leading-relaxed">The most valuable data is rarely where it's convenient to look. I go where it's messy first because that's usually where the real problem is hiding.</p>
           </div>
           <div className="bg-white border border-[rgba(28,28,28,0.08)] rounded-xl p-8">
-            <h3 className="text-xl text-[#1C1C1C] mb-3">Ship to learn</h3>
-            <p className="text-[#6B6B6B] leading-relaxed">V1 earns the right to V2.</p>
+            <h3 className="text-xl text-[#1C1C1C] mb-3">Build to test, not to spec</h3>
+            <p className="text-[#6B6B6B] leading-relaxed">A working prototype surfaces more truth than a thorough document. I put something real in front of users before defending a plan.</p>
           </div>
           <div className="bg-white border border-[rgba(28,28,28,0.08)] rounded-xl p-8">
-            <h3 className="text-xl text-[#1C1C1C] mb-3">Build with, not for</h3>
-            <p className="text-[#6B6B6B] leading-relaxed">Users are co-authors of the solution.</p>
+            <h3 className="text-xl text-[#1C1C1C] mb-3">Domain fluency is the design brief</h3>
+            <p className="text-[#6B6B6B] leading-relaxed">You can't design guardrails for a system you don't understand. I make it a practice to learn the domain before touching the interface.</p>
           </div>
           <div className="bg-white border border-[rgba(28,28,28,0.08)] rounded-xl p-8">
-            <h3 className="text-xl text-[#1C1C1C] mb-3">Metrics ≠ meaning</h3>
-            <p className="text-[#6B6B6B] leading-relaxed">Move the right number, not just any number.</p>
+            <h3 className="text-xl text-[#1C1C1C] mb-3">Move the right number</h3>
+            <p className="text-[#6B6B6B] leading-relaxed">A metric that moves without moving the business is noise with better formatting. I define what "right" means before building anything.</p>
           </div>
         </div>
       </div>
 
       {/* About Section */}
-      <div className="mb-20">
-        <div className="flex items-start gap-8 mb-6">
-          <div className="w-[120px] h-[120px] rounded-full overflow-hidden bg-[#E8E6E1] flex-shrink-0">
+      <div id="about" className="mb-20">
+        <div className="flex flex-col md:flex-row items-stretch gap-8 mb-6">
+          <div className="w-full md:w-[320px] overflow-hidden bg-[#E8E6E1] flex-shrink-0 rounded-lg">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1666577624653-b6f0043fed0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMHdhcm0lMjBuYXR1cmFsJTIwbGlnaHR8ZW58MXx8fHwxNzc2NTcxNDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Profile"
-              className="w-full h-full object-cover"
+              src="/assets/photo.PNG"
+              alt="Ashley Zhang"
+              className="w-full h-full object-cover min-h-[320px]"
             />
           </div>
-          <div className="flex-1 pt-2">
-            <p className="text-[#1C1C1C] leading-relaxed mb-6">
-              I help teams build AI products that solve real problems. With a background in engineering and design, I focus on translating complex ML capabilities into experiences people actually want to use. Currently working on making AI more accessible and genuinely useful.
+          <div className="flex-1">
+            <p className="text-[#1C1C1C] leading-relaxed mb-6 whitespace-pre-wrap">
+              I studied Mathematics and Statistics at the University of Toronto before moving into product management — where rigorous data thinking and genuine user empathy turned out to be the same skill applied in different directions.
+              {"\n\n"}
+              I currently lead product work at Mightex, where I own the full cycle: discovery, design, prototyping, and delivery. I build working prototypes before writing full specs, using Cursor and Claude to compress the gap between a design idea and something real enough to test.
+              {"\n\n"}
+              Before tech, my passion for equity in education led me to co-found Side by Side Agency — scaling from free tutoring to a virtual STEM research program that reached 2,000+ students across Canada. I now serve as Director of Finance at Stars for Scholarly Youth, where I treat financial reporting the same way I treat product analytics: a tool for surfacing what's hidden before it becomes a problem.
             </p>
             <div className="flex items-center gap-6">
-              <a href="https://linkedin.com" className="flex items-center gap-2 text-[#6B6B6B] hover:text-[#D4845A] transition-colors">
+              <a href="https://www.linkedin.com/in/ashley-z/" className="flex items-center gap-2 text-[#6B6B6B] hover:text-[#D4845A] transition-colors">
                 <Linkedin className="w-5 h-5" />
                 <span className="text-sm">LinkedIn</span>
               </a>
-              <a href="mailto:hello@example.com" className="flex items-center gap-2 text-[#6B6B6B] hover:text-[#D4845A] transition-colors">
+              <a href="mailto:ashleyzhang@outlook.com" className="flex items-center gap-2 text-[#6B6B6B] hover:text-[#D4845A] transition-colors">
                 <Mail className="w-5 h-5" />
                 <span className="text-sm">Email</span>
               </a>
@@ -131,7 +129,7 @@ export function Home() {
       {/* Footer */}
       <footer className="pt-12 pb-8 border-t border-[rgba(28,28,28,0.08)]">
         <p className="text-sm text-[#6B6B6B]">
-          Alex Morgan · 2026
+          Ashley Zhang · 2026
         </p>
       </footer>
     </div>
