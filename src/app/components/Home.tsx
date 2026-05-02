@@ -72,7 +72,7 @@ export function Home() {
       <div className="mb-32">
         <h2 className="text-xs uppercase tracking-wider text-[#6B6B6B] mb-8">Principles</h2>
         <p className="text-xl text-[#1C1C1C] leading-relaxed mb-12 max-w-[750px]">
-          Curious and always building — I bring together rigorous data analysis, hands-on prototyping, and domain learning to close the gap between what a system does and what users actually need it to do.
+          Curious and always building. I bring together rigorous data analysis, hands-on prototyping, and domain learning to close the gap between what a system does and what users actually need it to do.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white border border-[rgba(28,28,28,0.08)] rounded-xl p-8">
