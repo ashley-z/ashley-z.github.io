@@ -23,7 +23,7 @@ export function Home() {
       <div className="pt-16 pb-24">
         <p className="text-sm uppercase text-[#6B6B6B] mb-4"></p>
         <h1 className="text-[3.5rem] leading-[1.1] tracking-tight text-[#1C1C1C] mb-6" style={{ fontFamily: "'Lora', serif" }}>
-          Ashley is a product manager with a math & stats background and love for live music. She is a fan of <em className="not-italic text-[#D4845A]">messy data</em>, learns by building, and notices everything twice.
+          Ashley is a product manager with a math & stats background. She is a fan of <em className="not-italic text-[#D4845A]">messy data</em>, learns by building, and notices everything twice.
         </h1>
         <p className="text-lg text-[#6B6B6B] mb-8"></p>
         <a href="#about" className="inline-flex items-center gap-2 text-[#1C1C1C] hover:text-[#D4845A] transition-colors group">

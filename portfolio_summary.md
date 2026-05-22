@@ -6,7 +6,7 @@
 
 ## Who She Is
 
-**"Ashley is a product manager with a math & stats background and love for live music. She is a fan of *messy data*, learns by building, and notices everything twice."**
+**"Ashley is a product manager with a math & stats background. She is a fan of *messy data*, learns by building, and notices everything twice."**
 
 She sits squarely at the intersection of rigorous quantitative thinking and hands-on product delivery. With a **Mathematics & Statistics degree from the University of Toronto**, she is known for noticing patterns others overlook — in messy data, in support queues, in user behaviour — and turning those observations into shipped product.
 
