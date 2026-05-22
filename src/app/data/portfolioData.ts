@@ -48,21 +48,21 @@ export const projects = [
     id: "polytrace",
     title: "Neuron Detection Software",
     tag: "Product Design",
-    description: "Six-stage product interface for a machine learning pipeline — replaced a text-editor workflow with real-time visual feedback. Customer success rate: 0% → 60%.",
+    description: "Six-stage product interface for a machine learning pipeline.",
     image: "/assets/Homepage.png"
   },
   {
     id: "dashboard",
     title: "Sales Intelligence Dashboard",
     tag: "Data Product",
-    description: "Python/SQL intelligence pipeline on four years of messy CRM data; surfaced a $1.2M revenue leak hiding in free-text notes no one had ever aggregated.",
+    description: "Python/SQL intelligence pipeline on four years of messy CRM data.",
     image: "/assets/dashboard.png"
   },
   {
     id: "layout",
     title: "Layout Management Tool",
-    tag: "Shipped Internally · Vibe-coded",
-    description: "Recurring support burden turned into a self-serve drag-and-drop workspace tool. Prototyped solo with AI-assisted development, validated with two expert audiences before engineering handoff.",
+    tag: "Shipped Internally",
+    description: "Recurring support burden turned into a self-serve drag-and-drop workspace tool.",
     image: "/assets/editor.png"
   }
 ];
@@ -77,7 +77,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     role: "Designer & Project Manager",
     team: "1 Project Manager, 1 CS Research Fellow, 1 Full Stack Engineer, 1 Neuroscientist",
     technologies: "React, Python, CaImAn (open source analysis pipeline), TensorFlow/Keras, Cursor, Figma",
-    purpose: "0→1 ML product — from unstable research prototype to commercially viable pipeline",
+    purpose: "0→1 ML product; from unstable research prototype to commercially viable pipeline",
     timeline: "6 months",
     heroImage: "/assets/Homepage.png",
     challenge: "Neuroscientists generate gigabytes of video per session — fluorescent signals from live brain tissue that must be processed into individual neuron traces before any analysis can happen. The standard tool for this is CaImAn, a powerful open-source library. It works, but it is not a product.\n\nResearchers interact with it through a config file and a notebook: change a number, wait up to an hour for the pipeline to finish, inspect a static image, guess whether the settings were right, and run it again. The interface between a scientist and the algorithm is a text editor.\n\nWhen I joined the project, I had a Phase 1 backend pipeline and two pilot customers ready to test it. I needed to understand why the tool wasn't working for real users — and what a product that actually served them would look like.",
